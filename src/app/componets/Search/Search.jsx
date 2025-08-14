@@ -33,17 +33,17 @@ export default function Search({ onFilter }) {
   };
 
   return (
-    <div className="static bg-gray-200 flex w-full h-[50px] items-center justify-center gap-2 my-5">
+    <div className="static bg-gray-200 flex w-full h-[50px] items-center justify-center gap-2 my-5 px-2 sm:h-[50px] sm:gap-2 md:gap-4 md:h-[60px] lg:h-[70px] flex-wrap sm:flex-nowrap">
       <img className="w-[25px] h-[25px]" src="/search.svg" alt="" />
       <input
-        className="bg-white h-[25px] rounded-md"
+        className="bg-white h-[30px] rounded-md px-2 w-[120px] sm:w-[180px] md:w-[250px] lg:w-[300px] text-sm md:text-base"
         type="text"
         value={search}
         onChange={handleInput}
         placeholder="Buscar producto..."
       />
       <select
-        className="bg-white h-[25px] rounded-md px-2"
+        className="bg-white h-[30px] rounded-md px-2 w-[100px] sm:w-[140px] md:w-[180px] text-sm md:text-base"
         value={category}
         onChange={handleCategory}
       >
@@ -54,7 +54,7 @@ export default function Search({ onFilter }) {
         ))}
       </select>
       <button
-        className="absolute right-[-100px] w-[100px] bg-gray-100 hover:bg-gray-300 transition-all duration-300 rounded-sm"
+        className="w-[80px] sm:w-[100px] bg-gray-100 hover:bg-gray-300 transition-all duration-300 rounded-sm h-[30px] text-xs md:text-base mt-2 sm:mt-0 flex-shrink-0"
         onClick={createProduct}
       >
         Create
