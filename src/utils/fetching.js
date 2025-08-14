@@ -50,3 +50,12 @@ export async function deleteAxios(id) {
     });
   }
 }
+export async function getCategories() {
+  try {
+    let response = await axios.get(`${URL}/categories`);
+    return response.data;
+  } catch (error) {
+    console.error({ msg: error });
+    return [];
+  }
+}

@@ -42,13 +42,7 @@ export default function Page() {
     <div className="flex flex-col w-[400px] h-auto p-10 justify-center items-center bg-gray-100 rounded-2xl">
       <h1 className="text-2xl font-bold mb-4">Editar producto</h1>
       <Formik
-        initialValues={{
-          title: product.title || "",
-          price: product.price || "",
-          description: product.description || "",
-          category: product.category || "",
-          image: product.image || "",
-        }}
+        initialValues={product}
         validationSchema={validationSchema}
         enableReinitialize
         onSubmit={async (e) => {
